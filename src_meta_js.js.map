@@ -1,0 +1,1 @@
+{"version":3,"file":"src_meta_js.js","sources":["webpack://vertical1/./src/meta.js"],"sourcesContent":["export default function meta() {\n  return {\n    name: 'vertical1'\n  };\n}"],"mappings":";;;;;;;;;;;;;AAAA;AACA;AACA;AACA;AACA;AACA;A;;A","sourceRoot":""}

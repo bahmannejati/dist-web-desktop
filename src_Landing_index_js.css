@@ -1,0 +1,6 @@
+.v1-desktop-button {
+  position: fixed;
+  z-index: 1020;
+  right: 32px;
+  bottom: 32px;
+}
