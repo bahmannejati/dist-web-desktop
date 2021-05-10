@@ -1,0 +1,231 @@
+{
+  "sharedModules": [],
+  "federatedModules": [
+    {
+      "remote": "vertical1",
+      "entry": "https://bahmannejati.github.io/dist-web-desktop/remoteEntry.js",
+      "sharedModules": [
+        {
+          "chunks": [
+            "https://bahmannejati.github.io/dist-web-desktop/vendors-node_modules_khesht_react_dist_es_index_js.js"
+          ],
+          "provides": [
+            {
+              "shareScope": "default",
+              "shareKey": "@khesht/react",
+              "requiredVersion": "^git",
+              "strictVersion": false,
+              "singleton": true,
+              "eager": false
+            }
+          ]
+        },
+        {
+          "chunks": [
+            "https://bahmannejati.github.io/dist-web-desktop/vendors-node_modules_react-dom_index_js.js"
+          ],
+          "provides": [
+            {
+              "shareScope": "default",
+              "shareKey": "react-dom",
+              "requiredVersion": "^16.13.0",
+              "strictVersion": false,
+              "singleton": true,
+              "eager": false
+            }
+          ]
+        },
+        {
+          "chunks": [
+            "https://bahmannejati.github.io/dist-web-desktop/vendors-node_modules_react_index_js.js"
+          ],
+          "provides": [
+            {
+              "shareScope": "default",
+              "shareKey": "react",
+              "requiredVersion": "^16.13.0",
+              "strictVersion": false,
+              "singleton": true,
+              "eager": false
+            }
+          ]
+        }
+      ],
+      "exposes": {
+        "./meta": [
+          {
+            "chunks": [
+              "https://bahmannejati.github.io/dist-web-desktop/src_Landing_index_js.css",
+              "https://bahmannejati.github.io/dist-web-desktop/src_Landing_index_js.js",
+              "https://bahmannejati.github.io/dist-web-desktop/src_meta_js.js"
+            ],
+            "sharedModules": [
+              {
+                "chunks": [
+                  "https://bahmannejati.github.io/dist-web-desktop/vendors-node_modules_khesht_react_dist_es_index_js.js"
+                ],
+                "provides": [
+                  {
+                    "shareScope": "default",
+                    "shareKey": "@khesht/react",
+                    "requiredVersion": "^git",
+                    "strictVersion": false,
+                    "singleton": true,
+                    "eager": false
+                  }
+                ]
+              },
+              {
+                "chunks": [
+                  "https://bahmannejati.github.io/dist-web-desktop/vendors-node_modules_react_index_js.js"
+                ],
+                "provides": [
+                  {
+                    "shareScope": "default",
+                    "shareKey": "react",
+                    "requiredVersion": "^16.13.0",
+                    "strictVersion": false,
+                    "singleton": true,
+                    "eager": false
+                  }
+                ]
+              },
+              {
+                "chunks": [],
+                "provides": []
+              }
+            ]
+          }
+        ],
+        "./Landing": [
+          {
+            "chunks": [
+              "https://bahmannejati.github.io/dist-web-desktop/src_Landing_index_js.css",
+              "https://bahmannejati.github.io/dist-web-desktop/src_Landing_index_js.js"
+            ],
+            "sharedModules": [
+              {
+                "chunks": [
+                  "https://bahmannejati.github.io/dist-web-desktop/vendors-node_modules_khesht_react_dist_es_index_js.js"
+                ],
+                "provides": [
+                  {
+                    "shareScope": "default",
+                    "shareKey": "@khesht/react",
+                    "requiredVersion": "^git",
+                    "strictVersion": false,
+                    "singleton": true,
+                    "eager": false
+                  }
+                ]
+              },
+              {
+                "chunks": [
+                  "https://bahmannejati.github.io/dist-web-desktop/vendors-node_modules_react_index_js.js"
+                ],
+                "provides": [
+                  {
+                    "shareScope": "default",
+                    "shareKey": "react",
+                    "requiredVersion": "^16.13.0",
+                    "strictVersion": false,
+                    "singleton": true,
+                    "eager": false
+                  }
+                ]
+              },
+              {
+                "chunks": [],
+                "provides": []
+              }
+            ]
+          },
+          {
+            "chunks": [
+              "https://bahmannejati.github.io/dist-web-desktop/src_Landing_index_js.css",
+              "https://bahmannejati.github.io/dist-web-desktop/src_Landing_index_js.js"
+            ],
+            "sharedModules": [
+              {
+                "chunks": [
+                  "https://bahmannejati.github.io/dist-web-desktop/vendors-node_modules_khesht_react_dist_es_index_js.js"
+                ],
+                "provides": [
+                  {
+                    "shareScope": "default",
+                    "shareKey": "@khesht/react",
+                    "requiredVersion": "^git",
+                    "strictVersion": false,
+                    "singleton": true,
+                    "eager": false
+                  }
+                ]
+              },
+              {
+                "chunks": [
+                  "https://bahmannejati.github.io/dist-web-desktop/vendors-node_modules_react_index_js.js"
+                ],
+                "provides": [
+                  {
+                    "shareScope": "default",
+                    "shareKey": "react",
+                    "requiredVersion": "^16.13.0",
+                    "strictVersion": false,
+                    "singleton": true,
+                    "eager": false
+                  }
+                ]
+              },
+              {
+                "chunks": [],
+                "provides": []
+              }
+            ]
+          },
+          {
+            "chunks": [
+              "https://bahmannejati.github.io/dist-web-desktop/src_Landing_index_js.css",
+              "https://bahmannejati.github.io/dist-web-desktop/src_Landing_index_js.js"
+            ],
+            "sharedModules": [
+              {
+                "chunks": [
+                  "https://bahmannejati.github.io/dist-web-desktop/vendors-node_modules_khesht_react_dist_es_index_js.js"
+                ],
+                "provides": [
+                  {
+                    "shareScope": "default",
+                    "shareKey": "@khesht/react",
+                    "requiredVersion": "^git",
+                    "strictVersion": false,
+                    "singleton": true,
+                    "eager": false
+                  }
+                ]
+              },
+              {
+                "chunks": [
+                  "https://bahmannejati.github.io/dist-web-desktop/vendors-node_modules_react_index_js.js"
+                ],
+                "provides": [
+                  {
+                    "shareScope": "default",
+                    "shareKey": "react",
+                    "requiredVersion": "^16.13.0",
+                    "strictVersion": false,
+                    "singleton": true,
+                    "eager": false
+                  }
+                ]
+              },
+              {
+                "chunks": [],
+                "provides": []
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}
