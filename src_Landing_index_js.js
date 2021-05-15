@@ -59,14 +59,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _assets_background_jpg__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../assets/background.jpg */ "./src/assets/background.jpg");
 /* harmony import */ var _assets_logo_svg__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../assets/logo.svg */ "./src/assets/logo.svg");
-/* harmony import */ var _Landing__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Landing */ "./src/Landing/Landing.desktop.js");
-/* harmony import */ var _Landing_style__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./Landing.style */ "./src/Landing/Landing.style.desktop.scss");
+/* harmony import */ var _Lazy__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../Lazy */ "./src/Lazy/index.js");
+/* harmony import */ var _Landing__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./Landing */ "./src/Landing/Landing.desktop.js");
+/* harmony import */ var _Landing_style__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./Landing.style */ "./src/Landing/Landing.style.desktop.scss");
 
 
 
 
 
-const LazyComponent = /*#__PURE__*/(0,react__WEBPACK_IMPORTED_MODULE_0__.lazy)(() => __webpack_require__.e(/*! import() */ "src_Lazy_index_js").then(__webpack_require__.bind(__webpack_require__, /*! ../Lazy */ "./src/Lazy/index.js")));
+
 
 function Landing(props) {
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
@@ -74,12 +75,43 @@ function Landing(props) {
       color: 'white',
       backgroundImage: `url(${_assets_background_jpg__WEBPACK_IMPORTED_MODULE_1__.default})`
     }
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(LazyComponent, null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", null, "the wrapper for landing with serving mode :"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("img", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_Lazy__WEBPACK_IMPORTED_MODULE_3__.default, null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", null, "the wrapper for landing with serving mode :"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("img", {
     src: _assets_logo_svg__WEBPACK_IMPORTED_MODULE_2__.default
-  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_Landing__WEBPACK_IMPORTED_MODULE_3__.default, props));
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_Landing__WEBPACK_IMPORTED_MODULE_4__.default, props));
 }
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Landing);
+
+/***/ }),
+
+/***/ "./src/Lazy/index.js":
+/*!***************************!*\
+  !*** ./src/Lazy/index.js ***!
+  \***************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => __WEBPACK_DEFAULT_EXPORT__
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "webpack/sharing/consume/default/react/react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react_imported_component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-imported-component */ "./node_modules/react-imported-component/dist/es2015/entrypoints/index.js");
+/* harmony import */ var react_imported_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-imported-component */ "./node_modules/react-imported-component/dist/es2015/ui/LazyBoundary.js");
+var importedWrapper = __webpack_require__(/*! react-imported-component/wrapper */ "./node_modules/react-imported-component/wrapper.js");
+
+
+
+const Lazy = (0,react_imported_component__WEBPACK_IMPORTED_MODULE_1__.default)(() => importedWrapper("imported_-njieu2_component", __webpack_require__.e(/*! import() | Lazy */ "Lazy").then(__webpack_require__.bind(__webpack_require__, /*! ./Lazy */ "./src/Lazy/Lazy.js"))));
+
+function Component() {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_imported_component__WEBPACK_IMPORTED_MODULE_2__.LazyBoundary, {
+    fallback: "loading for lazy component"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Lazy, null));
+}
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Component);
 
 /***/ }),
 
