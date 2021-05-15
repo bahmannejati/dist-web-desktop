@@ -1,0 +1,1 @@
+{"version":3,"file":"src_Lazy_index_js.js","sources":["webpack://vertical1/./src/Lazy/index.js"],"sourcesContent":["import React from 'react';\n\nfunction Lazy() {\n  return /*#__PURE__*/React.createElement(React.Fragment, null, \"hoooooora lazy component\");\n}\n\nexport default Lazy;"],"mappings":";;;;;;;;;;;;;;;AAAA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;A;;A","sourceRoot":""}
