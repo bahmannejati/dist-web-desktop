@@ -14,7 +14,10 @@ var moduleMap = {
 		return __webpack_require__.e("src_meta_js").then(() => () => (__webpack_require__(/*! ./src/meta */ "./src/meta.js")));
 	},
 	"./Landing": () => {
-		return Promise.all([__webpack_require__.e("webpack_sharing_consume_default_react_react"), __webpack_require__.e("src_Landing_index_js")]).then(() => () => (__webpack_require__(/*! ./src/Landing */ "./src/Landing/index.js")));
+		return Promise.all([__webpack_require__.e("webpack_sharing_consume_default_react_react"), __webpack_require__.e("webpack_sharing_consume_default_khesht_react_khesht_react"), __webpack_require__.e("src_Landing_index_js")]).then(() => () => (__webpack_require__(/*! ./src/Landing */ "./src/Landing/index.js")));
+	},
+	"./Landing2": () => {
+		return Promise.all([__webpack_require__.e("webpack_sharing_consume_default_react_react"), __webpack_require__.e("webpack_sharing_consume_default_khesht_react_khesht_react"), __webpack_require__.e("src_Landing2_index_js")]).then(() => () => (__webpack_require__(/*! ./src/Landing2 */ "./src/Landing2/index.js")));
 	}
 };
 var get = (module, getScope) => {
@@ -391,7 +394,7 @@ __webpack_require__.d(exports, {
 /******/ 			"webpack_sharing_consume_default_react_react": [
 /******/ 				"webpack/sharing/consume/default/react/react"
 /******/ 			],
-/******/ 			"src_Landing_index_js": [
+/******/ 			"webpack_sharing_consume_default_khesht_react_khesht_react": [
 /******/ 				"webpack/sharing/consume/default/@khesht/react/@khesht/react"
 /******/ 			],
 /******/ 			"webpack_sharing_consume_default_react-dom_react-dom": [
@@ -520,7 +523,7 @@ __webpack_require__.d(exports, {
 /******/ 					if(installedChunkData) {
 /******/ 						promises.push(installedChunkData[2]);
 /******/ 					} else {
-/******/ 						if(!/^webpack_sharing_consume_default_react(\-dom_react\-dom|_react)$/.test(chunkId)) {
+/******/ 						if(!/^webpack_sharing_consume_default_(react(\-dom_react\-dom|_react)|khesht_react_khesht_react)$/.test(chunkId)) {
 /******/ 							// setup Promise in chunk cache
 /******/ 							var promise = new Promise((resolve, reject) => {
 /******/ 								installedChunkData = installedChunks[chunkId] = [resolve, reject];
