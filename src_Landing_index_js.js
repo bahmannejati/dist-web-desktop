@@ -95,23 +95,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => __WEBPACK_DEFAULT_EXPORT__
 /* harmony export */ });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "webpack/sharing/consume/default/react/react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var react_imported_component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-imported-component */ "./node_modules/react-imported-component/dist/es2015/entrypoints/index.js");
-/* harmony import */ var react_imported_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-imported-component */ "./node_modules/react-imported-component/dist/es2015/ui/LazyBoundary.js");
+/* harmony import */ var react_imported_component__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react-imported-component */ "./node_modules/react-imported-component/dist/es2015/entrypoints/index.js");
 var importedWrapper = __webpack_require__(/*! react-imported-component/wrapper */ "./node_modules/react-imported-component/wrapper.js");
 
 
-
-const LazyComponent = (0,react_imported_component__WEBPACK_IMPORTED_MODULE_1__.default)(() => importedWrapper("imported_-njieu2_component", __webpack_require__.e(/*! import() | Lazy */ "Lazy").then(__webpack_require__.bind(__webpack_require__, /*! ./Lazy */ "./src/Lazy/Lazy.js"))));
-
-function Component() {
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_imported_component__WEBPACK_IMPORTED_MODULE_2__.LazyBoundary, {
-    fallback: "loading from react-imported-component"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(LazyComponent, null));
-}
-
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Component);
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ((0,react_imported_component__WEBPACK_IMPORTED_MODULE_0__.default)(() => importedWrapper("imported_-njieu2_component", __webpack_require__.e(/*! import() | Lazy */ "Lazy").then(__webpack_require__.bind(__webpack_require__, /*! ./Lazy */ "./src/Lazy/Lazy.js")))));
 
 /***/ }),
 
