@@ -1,0 +1,1 @@
+{"version":3,"file":"src_Lazy_Lazy_js.js","sources":["webpack://vertical1/./src/Lazy/Lazy.js"],"sourcesContent":["import React from 'react';\n\nfunction Lazy() {\n  return /*#__PURE__*/React.createElement(\"span\", null, \"hoooooora lazy component v2\");\n}\n\nexport default Lazy;"],"mappings":";;;;;;;;;;;;;;;AAAA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;A;;A","sourceRoot":""}
