@@ -14,7 +14,7 @@ var moduleMap = {
 		return __webpack_require__.e("src_meta_js").then(() => () => (__webpack_require__(/*! ./src/meta */ "./src/meta.js")));
 	},
 	"./Landing": () => {
-		return Promise.all([__webpack_require__.e("vendors-node_modules_react-imported-component_dist_es2015_entrypoints_index_js-node_modules_r-117c5e"), __webpack_require__.e("webpack_sharing_consume_default_react_react"), __webpack_require__.e("webpack_sharing_consume_default_khesht_react_khesht_react"), __webpack_require__.e("src_Landing_index_js")]).then(() => () => (__webpack_require__(/*! ./src/Landing */ "./src/Landing/index.js")));
+		return Promise.all([__webpack_require__.e("vendors-node_modules_react-imported-component_dist_es2015_ui_HOC_js-node_modules_react-import-5dbaed"), __webpack_require__.e("webpack_sharing_consume_default_react_react"), __webpack_require__.e("webpack_sharing_consume_default_khesht_react_khesht_react"), __webpack_require__.e("src_Landing_index_js")]).then(() => () => (__webpack_require__(/*! ./src/Landing */ "./src/Landing/index.js")));
 	},
 	"./Landing2": () => {
 		return Promise.all([__webpack_require__.e("webpack_sharing_consume_default_react_react"), __webpack_require__.e("webpack_sharing_consume_default_khesht_react_khesht_react"), __webpack_require__.e("src_Landing2_index_js")]).then(() => () => (__webpack_require__(/*! ./src/Landing2 */ "./src/Landing2/index.js")));
