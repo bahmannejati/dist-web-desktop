@@ -97,14 +97,17 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "webpack/sharing/consume/default/react/react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react_imported_component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-imported-component */ "./node_modules/react-imported-component/dist/es2015/entrypoints/index.js");
+/* harmony import */ var react_imported_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-imported-component */ "./node_modules/react-imported-component/dist/es2015/ui/LazyBoundary.js");
 var importedWrapper = __webpack_require__(/*! react-imported-component/wrapper */ "./node_modules/react-imported-component/wrapper.js");
 
 
-const LazyComponent = /*#__PURE__*/(0,react__WEBPACK_IMPORTED_MODULE_0__.lazy)(() => importedWrapper("imported_-njieu2_component", __webpack_require__.e(/*! import() */ "src_Lazy_Lazy_js").then(__webpack_require__.bind(__webpack_require__, /*! ./Lazy */ "./src/Lazy/Lazy.js"))));
+
+const LazyComponent = (0,react_imported_component__WEBPACK_IMPORTED_MODULE_1__.default)(() => importedWrapper("imported_-njieu2_component", __webpack_require__.e(/*! import() | Lazy */ "Lazy").then(__webpack_require__.bind(__webpack_require__, /*! ./Lazy */ "./src/Lazy/Lazy.js"))));
 
 function Component() {
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react__WEBPACK_IMPORTED_MODULE_0__.Suspense, {
-    fallback: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", null, "Loading...")
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_imported_component__WEBPACK_IMPORTED_MODULE_2__.LazyBoundary, {
+    fallback: "loading from react-imported-component"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(LazyComponent, null));
 }
 
@@ -140,24 +143,6 @@ function meta() {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 // extracted by mini-css-extract-plugin
-
-
-/***/ }),
-
-/***/ "./node_modules/react-imported-component/wrapper.js":
-/*!**********************************************************!*\
-  !*** ./node_modules/react-imported-component/wrapper.js ***!
-  \**********************************************************/
-/***/ ((module) => {
-
-var importedWrapper = function(marker, realImport) {
-  if (typeof __deoptimization_sideEffect__ !== 'undefined') {
-    __deoptimization_sideEffect__(marker, realImport);
-  }
-  return realImport;
-};
-
-module.exports = importedWrapper;
 
 
 /***/ }),
