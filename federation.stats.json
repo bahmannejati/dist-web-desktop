@@ -1,5 +1,5 @@
 {
-  "publicPath": "http://localhost:3001/",
+  "publicPath": "https://bahmannejati.github.io/dist-web-desktop/",
   "namedChunkGroups": {
     "vertical1": {
       "assets": [
