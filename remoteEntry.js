@@ -14,10 +14,16 @@ var moduleMap = {
 		return __webpack_require__.e("src_meta_js").then(() => () => (__webpack_require__(/*! ./src/meta */ "./src/meta.js")));
 	},
 	"./Landing": () => {
-		return Promise.all([__webpack_require__.e("vendors-node_modules_react-imported-component_dist_es2015_ui_HOC_js-node_modules_react-import-5dbaed"), __webpack_require__.e("webpack_sharing_consume_default_react_react"), __webpack_require__.e("webpack_sharing_consume_default_khesht_react_khesht_react"), __webpack_require__.e("src_Landing_index_js")]).then(() => () => (__webpack_require__(/*! ./src/Landing */ "./src/Landing/index.js")));
+		return Promise.all([__webpack_require__.e("v1_stripe"), __webpack_require__.e("webpack_sharing_consume_default_react_react"), __webpack_require__.e("src_Landing_index_js")]).then(() => () => (__webpack_require__(/*! ./src/Landing */ "./src/Landing/index.js")));
 	},
 	"./Landing2": () => {
-		return Promise.all([__webpack_require__.e("webpack_sharing_consume_default_react_react"), __webpack_require__.e("webpack_sharing_consume_default_khesht_react_khesht_react"), __webpack_require__.e("src_Landing2_index_js")]).then(() => () => (__webpack_require__(/*! ./src/Landing2 */ "./src/Landing2/index.js")));
+		return Promise.all([__webpack_require__.e("webpack_sharing_consume_default_react_react"), __webpack_require__.e("src_Landing2_index_js")]).then(() => () => (__webpack_require__(/*! ./src/Landing2 */ "./src/Landing2/index.js")));
+	},
+	"./Landing3": () => {
+		return Promise.all([__webpack_require__.e("webpack_sharing_consume_default_react_react"), __webpack_require__.e("src_Landing3_index_js")]).then(() => () => (__webpack_require__(/*! ./src/Landing3 */ "./src/Landing3/index.js")));
+	},
+	"./Landing4": () => {
+		return Promise.all([__webpack_require__.e("webpack_sharing_consume_default_react_react"), __webpack_require__.e("src_Landing4_index_js")]).then(() => () => (__webpack_require__(/*! ./src/Landing4 */ "./src/Landing4/index.js")));
 	}
 };
 var get = (module, getScope) => {
@@ -62,16 +68,13 @@ __webpack_require__.d(exports, {
 /******/ 		}
 /******/ 		// Create a new module (and put it into the cache)
 /******/ 		var module = __webpack_module_cache__[moduleId] = {
-/******/ 			id: moduleId,
-/******/ 			loaded: false,
+/******/ 			// no module.id needed
+/******/ 			// no module.loaded needed
 /******/ 			exports: {}
 /******/ 		};
 /******/ 	
 /******/ 		// Execute the module function
 /******/ 		__webpack_modules__[moduleId](module, module.exports, __webpack_require__);
-/******/ 	
-/******/ 		// Flag the module as loaded
-/******/ 		module.loaded = true;
 /******/ 	
 /******/ 		// Return the exports of the module
 /******/ 		return module.exports;
@@ -146,21 +149,6 @@ __webpack_require__.d(exports, {
 /******/ 				if (typeof window === 'object') return window;
 /******/ 			}
 /******/ 		})();
-/******/ 	})();
-/******/ 	
-/******/ 	/* webpack/runtime/harmony module decorator */
-/******/ 	(() => {
-/******/ 		__webpack_require__.hmd = (module) => {
-/******/ 			module = Object.create(module);
-/******/ 			if (!module.children) module.children = [];
-/******/ 			Object.defineProperty(module, 'exports', {
-/******/ 				enumerable: true,
-/******/ 				set: () => {
-/******/ 					throw new Error('ES Modules may not assign module.exports or exports.*, Use ESM export syntax, instead: ' + module.id);
-/******/ 				}
-/******/ 			});
-/******/ 			return module;
-/******/ 		};
 /******/ 	})();
 /******/ 	
 /******/ 	/* webpack/runtime/hasOwnProperty shorthand */
@@ -277,7 +265,7 @@ __webpack_require__.d(exports, {
 /******/ 	
 /******/ 	/* webpack/runtime/publicPath */
 /******/ 	(() => {
-/******/ 		__webpack_require__.p = "https://bahmannejati.github.io/dist-web-desktop/";
+/******/ 		__webpack_require__.p = "http://localhost:3001/";
 /******/ 	})();
 /******/ 	
 /******/ 	/* webpack/runtime/consumes */
@@ -412,7 +400,7 @@ __webpack_require__.d(exports, {
 /******/ 			"webpack_sharing_consume_default_react_react": [
 /******/ 				"webpack/sharing/consume/default/react/react"
 /******/ 			],
-/******/ 			"webpack_sharing_consume_default_khesht_react_khesht_react": [
+/******/ 			"src_Landing_index_js": [
 /******/ 				"webpack/sharing/consume/default/@khesht/react/@khesht/react"
 /******/ 			],
 /******/ 			"webpack_sharing_consume_default_react-dom_react-dom": [
@@ -505,7 +493,7 @@ __webpack_require__.d(exports, {
 /******/ 		};
 /******/ 		
 /******/ 		__webpack_require__.f.miniCss = (chunkId, promises) => {
-/******/ 			var cssChunks = {"src_Landing_index_js":1};
+/******/ 			var cssChunks = {"src_Landing_index_js":1,"Lazy":1};
 /******/ 			if(installedCssChunks[chunkId]) promises.push(installedCssChunks[chunkId]);
 /******/ 			else if(installedCssChunks[chunkId] !== 0 && cssChunks[chunkId]) {
 /******/ 				promises.push(installedCssChunks[chunkId] = loadStylesheet(chunkId).then(() => {
@@ -541,7 +529,7 @@ __webpack_require__.d(exports, {
 /******/ 					if(installedChunkData) {
 /******/ 						promises.push(installedChunkData[2]);
 /******/ 					} else {
-/******/ 						if(!/^webpack_sharing_consume_default_(react(\-dom_react\-dom|_react)|khesht_react_khesht_react)$/.test(chunkId)) {
+/******/ 						if(!/^webpack_sharing_consume_default_react(\-dom_react\-dom|_react)$/.test(chunkId)) {
 /******/ 							// setup Promise in chunk cache
 /******/ 							var promise = new Promise((resolve, reject) => {
 /******/ 								installedChunkData = installedChunks[chunkId] = [resolve, reject];

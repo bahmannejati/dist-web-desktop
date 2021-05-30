@@ -1,0 +1,250 @@
+{
+  "publicPath": "http://localhost:3001/",
+  "namedChunkGroups": {
+    "vertical1": {
+      "assets": [
+        {
+          "name": "remoteEntry.js"
+        }
+      ]
+    },
+    "Lazy": {
+      "assets": [
+        {
+          "name": "Lazy.css"
+        },
+        {
+          "name": "Lazy.js"
+        }
+      ]
+    },
+    "DeepLazy": {
+      "assets": [
+        {
+          "name": "v1_stripe.js"
+        },
+        {
+          "name": "v1_lodash_flatten.js"
+        },
+        {
+          "name": "DeepLazy.js"
+        }
+      ]
+    }
+  },
+  "chunks": [
+    {
+      "files": [
+        "DeepLazy.js"
+      ],
+      "origins": [
+        {
+          "loc": "12:60-14:15",
+          "moduleId": "./src/DeepLazy/index.js"
+        }
+      ]
+    },
+    {
+      "files": [
+        "Lazy.css",
+        "Lazy.js"
+      ],
+      "origins": [
+        {
+          "loc": "14:60-16:11",
+          "moduleId": "./src/Lazy/index.js"
+        }
+      ]
+    },
+    {
+      "files": [
+        "node_modules_object-assign_index_js-node_modules_prop-types_checkPropTypes_js.js"
+      ],
+      "origins": [
+        {
+          "loc": "",
+          "moduleId": "webpack/sharing/provide/default/react-dom"
+        }
+      ]
+    },
+    {
+      "files": [
+        "src_Landing2_index_js.js"
+      ],
+      "origins": [
+        {
+          "loc": "./Landing2",
+          "moduleId": "webpack/container/entry/vertical1"
+        }
+      ]
+    },
+    {
+      "files": [
+        "src_Landing3_index_js.js"
+      ],
+      "origins": [
+        {
+          "loc": "./Landing3",
+          "moduleId": "webpack/container/entry/vertical1"
+        }
+      ]
+    },
+    {
+      "files": [
+        "src_Landing4_index_js.js"
+      ],
+      "origins": [
+        {
+          "loc": "./Landing4",
+          "moduleId": "webpack/container/entry/vertical1"
+        }
+      ]
+    },
+    {
+      "files": [
+        "src_Landing_index_js.css",
+        "src_Landing_index_js.js"
+      ],
+      "origins": [
+        {
+          "loc": "./Landing",
+          "moduleId": "webpack/container/entry/vertical1"
+        }
+      ]
+    },
+    {
+      "files": [
+        "src_meta_js.js"
+      ],
+      "origins": [
+        {
+          "loc": "./meta",
+          "moduleId": "webpack/container/entry/vertical1"
+        }
+      ]
+    },
+    {
+      "files": [
+        "v1_lodash_flatten.js"
+      ],
+      "origins": [
+        {
+          "loc": "12:60-14:15",
+          "moduleId": "./src/DeepLazy/index.js"
+        }
+      ]
+    },
+    {
+      "files": [
+        "v1_stripe.js"
+      ],
+      "origins": [
+        {
+          "loc": "12:60-14:15",
+          "moduleId": "./src/DeepLazy/index.js"
+        },
+        {
+          "loc": "./Landing",
+          "moduleId": "webpack/container/entry/vertical1"
+        }
+      ]
+    },
+    {
+      "files": [
+        "vendors-node_modules_khesht_react_dist_es_index_js.js"
+      ],
+      "origins": [
+        {
+          "loc": "",
+          "moduleId": "webpack/sharing/consume/default/@khesht/react/@khesht/react"
+        },
+        {
+          "loc": "",
+          "moduleId": "webpack/sharing/provide/default/@khesht/react"
+        }
+      ]
+    },
+    {
+      "files": [
+        "vendors-node_modules_react-dom_index_js.js"
+      ],
+      "origins": [
+        {
+          "loc": "",
+          "moduleId": "webpack/sharing/consume/default/react-dom/react-dom"
+        },
+        {
+          "loc": "",
+          "moduleId": "webpack/sharing/provide/default/react-dom"
+        }
+      ]
+    },
+    {
+      "files": [
+        "vendors-node_modules_react_index_js.js"
+      ],
+      "origins": [
+        {
+          "loc": "",
+          "moduleId": "webpack/sharing/consume/default/react/react"
+        },
+        {
+          "loc": "",
+          "moduleId": "webpack/sharing/provide/default/react"
+        }
+      ]
+    },
+    {
+      "files": [
+        "remoteEntry.js"
+      ],
+      "origins": [
+        {
+          "loc": "vertical1"
+        }
+      ]
+    },
+    {
+      "files": [],
+      "origins": [
+        {
+          "loc": "",
+          "moduleId": "webpack/sharing/consume/default/@khesht/react/@khesht/react"
+        },
+        {
+          "loc": "",
+          "moduleId": "webpack/sharing/provide/default/@khesht/react"
+        }
+      ]
+    },
+    {
+      "files": [],
+      "origins": [
+        {
+          "loc": "./Landing",
+          "moduleId": "webpack/container/entry/vertical1"
+        },
+        {
+          "loc": "./Landing2",
+          "moduleId": "webpack/container/entry/vertical1"
+        },
+        {
+          "loc": "./Landing3",
+          "moduleId": "webpack/container/entry/vertical1"
+        },
+        {
+          "loc": "./Landing4",
+          "moduleId": "webpack/container/entry/vertical1"
+        },
+        {
+          "loc": "",
+          "moduleId": "webpack/sharing/provide/default/@khesht/react"
+        },
+        {
+          "loc": "",
+          "moduleId": "webpack/sharing/provide/default/react-dom"
+        }
+      ]
+    }
+  ]
+}

@@ -57,11 +57,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "webpack/sharing/consume/default/react/react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _assets_background_jpg__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../assets/background.jpg */ "./src/assets/background.jpg");
-/* harmony import */ var _assets_logo_svg__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../assets/logo.svg */ "./src/assets/logo.svg");
-/* harmony import */ var _Lazy__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../Lazy */ "./src/Lazy/index.js");
-/* harmony import */ var _Landing__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./Landing */ "./src/Landing/Landing.desktop.js");
-/* harmony import */ var _Landing_style__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./Landing.style */ "./src/Landing/Landing.style.desktop.scss");
+/* harmony import */ var _stripe_stripe_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @stripe/stripe-js */ "./node_modules/@stripe/stripe-js/dist/stripe.esm.js");
+/* harmony import */ var _assets_background_jpg__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../assets/background.jpg */ "./src/assets/background.jpg");
+/* harmony import */ var _assets_logo_svg__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../assets/logo.svg */ "./src/assets/logo.svg");
+/* harmony import */ var _Lazy__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../Lazy */ "./src/Lazy/index.js");
+/* harmony import */ var _Landing__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./Landing */ "./src/Landing/Landing.desktop.js");
+/* harmony import */ var _Landing_style__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./Landing.style */ "./src/Landing/Landing.style.desktop.scss");
+
 
 
 
@@ -70,14 +72,15 @@ __webpack_require__.r(__webpack_exports__);
 
 
 function Landing(props) {
+  console.log('loadStripe type : ', typeof _stripe_stripe_js__WEBPACK_IMPORTED_MODULE_1__.loadStripe);
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("article", {
     style: {
       color: 'white',
-      backgroundImage: `url(${_assets_background_jpg__WEBPACK_IMPORTED_MODULE_1__.default})`
+      backgroundImage: `url(${_assets_background_jpg__WEBPACK_IMPORTED_MODULE_2__.default})`
     }
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_Lazy__WEBPACK_IMPORTED_MODULE_3__.default, null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", null, "the wrapper for landing with serving mode :"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("img", {
-    src: _assets_logo_svg__WEBPACK_IMPORTED_MODULE_2__.default
-  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_Landing__WEBPACK_IMPORTED_MODULE_4__.default, props));
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_Lazy__WEBPACK_IMPORTED_MODULE_4__.default, null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", null, "the wrapper for landing with serving mode :"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("img", {
+    src: _assets_logo_svg__WEBPACK_IMPORTED_MODULE_3__.default
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_Landing__WEBPACK_IMPORTED_MODULE_5__.default, props));
 }
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Landing);
@@ -93,18 +96,92 @@ function Landing(props) {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => __WEBPACK_DEFAULT_EXPORT__
+/* harmony export */   "default": () => /* binding */ Comp
 /* harmony export */ });
-/* harmony import */ var react_imported_component__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react-imported-component */ "./node_modules/react-imported-component/dist/es2015/ui/HOC.js");
-/* harmony import */ var react_imported_component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-imported-component */ "./node_modules/react-imported-component/dist/es2015/ui/LazyBoundary.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "webpack/sharing/consume/default/react/react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 var importedWrapper = __webpack_require__(/*! react-imported-component/wrapper */ "./node_modules/react-imported-component/wrapper.js");
 
- // export default importedComponent(() => import(/* webpackChunkName: "Lazy" */ './Lazy'), {
-//   LoadingComponent: 
-// });
+ // similar ways (more complex) :
+// https://github.com/faceyspacey/babel-plugin-universal-import
+// https://github.com/faceyspacey/react-universal-component/blob/master/src/index.js
+// this way we assume that the vertical server-side bundle is just 1 chunk file,
+// if we want to support splitted chunks for server-side bundle, we should write
+// a babel plugin then add a `require` manually, this way we
+// ensure the module is loaded before rendering
+// for the first release, we do it manually! but a babel plugin
+// can simply do this manual works
 
-const Component = (0,react_imported_component__WEBPACK_IMPORTED_MODULE_0__.lazy)(() => importedWrapper("imported_-njieu2_component", __webpack_require__.e(/*! import() | Lazy */ "Lazy").then(__webpack_require__.bind(__webpack_require__, /*! ./Lazy */ "./src/Lazy/Lazy.js"))));
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (ServerSideFriendly = () => /*#__PURE__*/React.createElement(react_imported_component__WEBPACK_IMPORTED_MODULE_1__.LazyBoundary, null, ' ', /*#__PURE__*/React.createElement(Component, null)));
+const lazy = {
+  load: () => importedWrapper("imported_-njieu2_component", __webpack_require__.e(/*! import() | Lazy */ "Lazy").then(__webpack_require__.bind(__webpack_require__, /*! ./Lazy */ "./src/Lazy/Lazy.js"))),
+  id: /*require.resolve*/(/*! ./Lazy */ "./src/Lazy/Lazy.js"),
+  chunkName: 'Lazy'
+};
+const isSSR = typeof window === 'undefined';
+
+function getModuleID(id) {
+  return `vertical1:${id}`;
+} // this variables acts as a cache, we assume that the context of this
+// module is shared when it is used multiple times, otherwise the next
+// usages of this module may execute without a cache, so they show a
+// loading
+// if the cache is not shared, we should use a `window[key]` approach
+// instead of `CSRComponentAfterHydrate = module.default;` or use a webpack
+// cache variable
+// TODO: better to use a shared variable to prevent non-necessary loading in some
+// cases, note that cache unused modules should be cleaned up whenever neened
+
+
+let CSRComponentAfterHydrate = null;
+
+if (!isSSR) {
+  // this just affects the initial hydrate, after the initial hydrate
+  // this code has no effect!
+  // NOTE: when this module is loaded, so it's ok to load the lazy too
+  lazy.load().then(module => {
+    CSRComponentAfterHydrate = module.default;
+
+    window.__receiveVerticalMarkSignal(getModuleID(lazy.id));
+  });
+}
+
+console.log('how many times, lazy module added?');
+function Comp() {
+  // during CSR and before the the first hydrate, this component doesn't render!
+  // right after the lazy is loaded, the component will be rendered
+  const [loading, setLoading] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(true);
+  const module = (0,react__WEBPACK_IMPORTED_MODULE_0__.useRef)();
+  (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(() => {
+    // NOTE: the module is already requested in the browser, this
+    // load is just to found out when to hide the loading, so it's not slow
+    lazy.load().then(m => {
+      module.current = m;
+      setLoading(false);
+    });
+  }, []); // what if component is loaded according an state in upper components?
+  // if at the SSR phase, it is not needed, so there is no need to call
+  // add to global chunks, and if at the client side it will be required,
+  // so let the CSR do it by itself! everything is ok.
+
+  if (isSSR) {
+    __webpack_require__.g.__ADD_VERTICAL_REQUIRED_MARK(getModuleID(lazy.id), lazy.chunkName, lazy.id);
+
+    const Component = __webpack_require__(lazy.id).default;
+
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Component, null);
+  }
+
+  if (CSRComponentAfterHydrate) {
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(CSRComponentAfterHydrate, null);
+  }
+
+  if (!loading) {
+    const CSRComponent = module.current.default;
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(CSRComponent, null);
+  }
+
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", null, "loading module!");
+}
 
 /***/ }),
 
@@ -136,6 +213,24 @@ function meta() {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 // extracted by mini-css-extract-plugin
+
+
+/***/ }),
+
+/***/ "./node_modules/react-imported-component/wrapper.js":
+/*!**********************************************************!*\
+  !*** ./node_modules/react-imported-component/wrapper.js ***!
+  \**********************************************************/
+/***/ ((module) => {
+
+var importedWrapper = function(marker, realImport) {
+  if (typeof __deoptimization_sideEffect__ !== 'undefined') {
+    __deoptimization_sideEffect__(marker, realImport);
+  }
+  return realImport;
+};
+
+module.exports = importedWrapper;
 
 
 /***/ }),
